@@ -4,17 +4,8 @@
 
 <script>
 export default {
+  props: ['time'],
   name: 'Timer',
-  data() {
-    return {
-      time: 0,
-    };
-  },
-  mounted: {
-    timer() {
-      this.time = 1;
-    },
-  },
 };
 </script>
 

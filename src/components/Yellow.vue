@@ -1,5 +1,5 @@
 <template>
-  <div class="yellow circle" v-bind:class="{ active: state }"></div>
+  <div class="yellow circle" v-bind:class="{ active: state == 'yellow' }"></div>
 </template>
 
 <script>

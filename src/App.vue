@@ -5,7 +5,7 @@
       <Yellow v-bind:state="state"/>
       <Green v-bind:state="state"/>
     </main>
-    <Timer />
+    <Timer v-bind:time="time"/>
   </div>
 </template>
 
@@ -25,8 +25,13 @@ export default {
   },
   data() {
     return {
-      state: false,
+      prevState: '',
+      state: this.$route.params.color,
+      time: 0,
     };
+  },
+  methods: {
+
   },
 };
 </script>
