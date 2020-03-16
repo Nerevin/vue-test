@@ -1,10 +1,11 @@
 <template>
   <div id="app" class="app">
     <main class="body">
-      <Red />
-      <Yellow class="active"/>
-      <Green />
+      <Red v-bind:state="state"/>
+      <Yellow v-bind:state="state"/>
+      <Green v-bind:state="state"/>
     </main>
+    <Timer />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import Red from '@/components/Red.vue';
 import Yellow from '@/components/Yellow.vue';
 import Green from '@/components/Green.vue';
+import Timer from '@/components/Timer.vue';
 
 export default {
   name: 'App',
@@ -19,6 +21,12 @@ export default {
     Red,
     Yellow,
     Green,
+    Timer,
+  },
+  data() {
+    return {
+      state: false,
+    };
   },
 };
 </script>

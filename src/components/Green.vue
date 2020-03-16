@@ -1,9 +1,10 @@
 <template>
-  <div class="green circle"></div>
+  <div class="green circle" v-bind:class="{ active: state }"></div>
 </template>
 
 <script>
 export default {
+  props: ['state'],
   name: 'Green',
 };
 </script>
